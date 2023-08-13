@@ -1,0 +1,62 @@
+.header {
+    background-color:bisque;
+    padding: 2rem;
+    text-align: left; 
+}
+
+.header h5{
+    display: inline;
+    font-size: 18px;
+}
+
+.header h3{
+    font-size: 27px;
+    display: inline;
+    margin:0;
+    margin-left:10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.social-links {
+    margin-top: 10px; /* Add spacing between name and links */
+    
+  }
+
+  .social-links a {
+    margin : 7px;
+  }
+
+.social-links img {
+    width: 19px; /* Adjust the image size as needed */
+    height: 19px; /* Adjust the image size as needed */
+    vertical-align: middle;
+  }
+
+  .social-links a:hover {
+    color: #007bff;
+  }
+
+  .nav-links {
+  margin-top: -45px;
+    text-align: right;
+  }
+
+  
+  .nav-links a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #666; /* Change color on hover */
+  }
+  
+  
+  
+  
+  
+  
