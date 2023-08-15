@@ -11,7 +11,7 @@ export default function header() {
     <header className="header"> 
      <h5>HEY, I'M </h5>
      <h3>TEJASVI  RAGHUVNASHI</h3>
-
+    
      <div className="social-links">
       <a
        href = "https://github.com/Tejas-raghu"
@@ -33,13 +33,14 @@ export default function header() {
 
        <nav className="nav-links">
 
-       <a href={Resume} download = "Resume.pdf">Resume</a>
+       
           <a href="#about">About</a>
           <a href="#professional">Professional Experience</a>
           <a href="#skill">Skills</a>
           <a href="#project">Projects</a>
           <a href="#certificate">Certificates</a>
           <a href="#contact">Contact</a>
+         <a href={Resume} download = "Resume.pdf">Resume</a>
        
       </nav>
 
