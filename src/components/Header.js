@@ -10,7 +10,7 @@ export default function Header() {
 
   useEffect(() => {
     const targetText = "TEJASVI  RAGHUVNASHI";
-    let currentIndex = 0;
+    let currentIndex = 0; 
 
     const interval = setInterval(() => {
       setTypewriterText(targetText.substring(0, currentIndex + 1));
