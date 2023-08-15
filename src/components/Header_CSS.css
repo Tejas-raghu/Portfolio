@@ -1,29 +1,95 @@
-.header {
-    background-color:bisque;
+  
+  /* @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .header {
+    animation: slideIn 1s ease;
+  } */
+  
+  
+  .header {
+    /* background-color:bisque; */
+    background: linear-gradient(135deg, #ffbe76, #ff7979);
     padding: 2rem;
     text-align: left; 
 }
 
-.header h5{
-    display: inline;
-    font-size: 18px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.header h3{
-    font-size: 27px;
-    display: inline;
-    margin:0;
-    margin-left:10px;
-    font-family: 'Times New Roman', Times, serif;
+@keyframes colorChange {
+  0%, 100% {
+    color: #333;
+  }
+  50% {
+    color: #ff5722;
+  }
 }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes typeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.header h5 {
+  font-size: 18px;
+  display: inline-block;
+  margin: 20px 0 0 10px;
+  animation: fadeInUp 1s ease, colorChange 3s infinite, bounce 2s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header h3 {
+  font-size: 27px;
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  animation: fadeInUp 1.5s ease, colorChange 3s infinite, bounce 3s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
 
 .social-links {
     margin-top: 10px; /* Add spacing between name and links */
-    
+    margin-left: 100px;
   }
 
   .social-links a {
-    margin : 7px;
+    margin : 19px;
   }
 
 .social-links img {
@@ -32,9 +98,16 @@
     vertical-align: middle;
   }
 
-  .social-links a:hover {
+  /* .social-links a:hover {
     color: #007bff;
-  }
+  } */
+
+.social-links a:hover,
+.nav-links a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: #5c3508; /* Change color on hover */
+}
 
   .nav-links {
   margin-top: -45px;
@@ -51,12 +124,8 @@
     transition: color 0.3s ease;
   }
   
-  .nav-links a:hover {
-    color: #666; /* Change color on hover */
-  }
-  
-  
-  
-  
+  /* .nav-links a:hover {
+    color: #666; 
+  } */
   
   
