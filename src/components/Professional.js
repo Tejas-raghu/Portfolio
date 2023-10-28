@@ -1,21 +1,40 @@
 import React from "react";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
   return (
     <div id="professional" className="profession">
-    <hr></hr>
+      <hr></hr>
       <h3 className="experience-header">Professional Experience</h3>
-      <h4>HighRadius | Product Engineer Intern</h4>
-      <p>
-        Developed a Machine Learning model using data analysis and predictive
-        modeling techniques to predict customer order amounts, integrated with a
-        Full-stack Invoice Management Application built with React JS, Java
-        Servlets, and JDBC for web development and database management.
-      </p>
+      <div className="experience-box">
+        <h4>HighRadius | Product Engineer Intern</h4>
+        <p>
+          Developed a Machine Learning model using data analysis and predictive
+          modeling techniques to predict customer order amounts, integrated with
+          a Full-stack Invoice Management Application built with React JS, Java
+          Servlets, and JDBC for web development and database management.
+        </p>
 
-      <a href = "https://github.com/Tejas-raghu/Invoice_Management_system_HRC" target="_blank" rel="noopener noreferrer">
-        <button className="github-button">View</button>
-      </a>
+        <a
+          href="https://github.com/Tejas-raghu/Invoice_Management_system_HRC"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="github-button">View</button>
+        </a>
+      </div>
+
+      <div className="experience-box">
+        <h4>Flick2Know | Intern</h4>
+        <p>
+          Leveraged Vue.js and Nuxt.js to develop and maintain user interfaces
+          for web applications, adhering to best practices and coding standards.
+          Collaborated with a team of experienced developers to implement new
+          features and resolve bugs, ensuring timely delivery of high-quality
+          products.
+        </p>
+
+      </div>
       <style>
         {`
              .profession{
@@ -36,6 +55,14 @@ export default function () {
                font-size: 25px;
                font-family: 'Times New Roman', Times, serif;
                color: #333;
+          }
+
+          .experience-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
           }
 
           .experience-header::after {
