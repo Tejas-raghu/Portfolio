@@ -11,14 +11,14 @@ export default function Skils() {
           HTML, CSS
         </li>
         <li>
-          <strong>Libraries/Frameworks: </strong> React JS, Express JS, Node JS,
-          MongoDB
+          <strong>Libraries/Frameworks: </strong> React JS, Express JS, Node JS, VueJS, NuxtJS
+          
         </li>
         <li>
           <strong>Tools / Platforms:</strong> Github, VS Code, Eclipse, Postman
         </li>
         <li>
-          <strong>Databases:</strong> SQL
+          <strong>Databases:</strong> SQL, MongoDB
         </li>
       </ul>
 
