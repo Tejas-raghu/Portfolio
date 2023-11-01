@@ -27,7 +27,7 @@ export default function Certificates() {
                 <a href = "https://drive.google.com/file/d/1321OKquswMe3lTyDsyJgzuHDHTlQaWD5/view" target = "_blank" rel = "noopener noreferrer"> AWS</a> 
                 </li>
                 <li><strong>HackerRank React (Basic) -</strong> 
-                <a href = "https://www.hackerrank.com/certificates/8fefdde341c4?test_finished=true" target = "_blank" rel = "noopener noreferrer"> HackerRank</a> 
+                <a href = "https://www.hackerrank.com/certificates/8fefdde341c4?test_finished=true" target = "_blank" rel = "noopener noreferrer"> HackerRankn</a> 
                 </li>
 
             </ul>
