@@ -1,65 +1,46 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { ThemeContext } from "../ThemeContext";
+import FloatingToggleButton from "../components/FloatingToggleButton";
 
 export default function About() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
-    <div id="about" className = "about">
-    
-        <h3 className="about-exp">About Me</h3>
-        <p>
-        Fascinated by solving puzzles and thinking logically, 
-        I chose a career in software development. The constant evolution of this field and its real-world impact captivated me. 
-        Beyond college, I explored web development through online tutorials and projects, 
-        gaining the skills and confidence to create web applications.
+    <section
+      id="about"
+      className={`w-full min-h-screen flex flex-col justify-center items-center px-6 md:px-16 lg:px-24 transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900"}`}
+    >
+      <FloatingToggleButton />
+      <div className="max-w-3xl text-center md:text-left">
+        {/* Title with Underline */}
+        <h3
+          className={`text-3xl font-semibold mb-4 relative inline-block after:content-[''] after:w-full after:h-[2px] after:absolute after:left-0 after:bottom-[-4px] ${darkMode ? "after:bg-white" : "after:bg-gray-900"}`}
+        >
+          About Me
+        </h3>
+
+        {/* About Description */}
+        <p
+          className={`text-lg leading-relaxed transition-all ${darkMode ? "text-gray-300" : "text-gray-700"}`}
+        >
+          Fascinated by solving puzzles and logical thinking, I chose software development. The continuous evolution of this field and its impact captivated me. Beyond college, I explored web development through projects, gaining confidence in building applications.
+          <br /><br />
+          Currently, I work as a Software Developer, where I apply my skills to build efficient, scalable, and user-friendly applications. I enjoy tackling complex challenges and continuously learning to enhance my expertise in full-stack development.
         </p>
 
-
-        <style>
-            {`
-            .about {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: left;
-            
-          }
-
-          
-          .about-exp {
-                margin-left: 12px;
-               position: relative; /* For positioning the line */
-               display: inline-block; /* To contain inline elements */
-               font-size: 25px;
-               font-family: 'Times New Roman', Times, serif;
-               color: #333;
-          }
-
-          .about-exp::after {
-               content: "";
-               position: absolute;
-               left: 0;
-               bottom: -5px; /* Adjust this value to control line position */
-               width: 100%;
-               height: 2px;
-               background-color: #333;
-          }
-
-          .about h3 {
-            text-align: left;
-            margin-left: 6px;
-            font-size: 25px;
-            font-family: 'Times New Roman', Times, serif;
-            color: #333;
-          }
-
-          .about p {
-            
-            font-size: 18px;
-            text-align: left;
-            line-height: 1.5;
-            color: #666;
-            margin-left: 5px;
-          }
-            `}
-        </style>
-    </div>
-  )
+        {/* GitHub Button */}
+        <a
+          href="https://github.com/Tejas-raghu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`mt-6 inline-flex items-center gap-3 px-6 py-3 border rounded-full font-medium transition-all duration-300 ${darkMode ? "border-white text-white hover:bg-white hover:text-gray-900" : "border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"}`}
+        >
+          <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+          View My Work
+        </a>
+      </div>
+    </section>
+  );
 }

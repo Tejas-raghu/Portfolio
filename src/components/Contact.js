@@ -1,69 +1,29 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 export default function Contact() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
-    <div id="contact" className = "contact">
-      <hr></hr>
-      <h3>Contact</h3>
-      <p className="details">
-        <strong>Email: {" "}</strong>
-        <a className = "link" href = "mailto:tejasviraghuvanshi3@gmail.com">
-          <strong>tejasviraghuvanshi3@gmail.com</strong>
-        </a>
-      </p>
-      <p className="details"> <strong> Phone: <span className = "phone">8077185801</span></strong></p>
+    <div id="contact" className={`py-12 px-6 transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900"}`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <h3 className={`text-3xl font-semibold border-b-4 inline-block pb-1 mb-8 ${darkMode ? "border-gray-400" : "border-gray-600"}`}>Contact</h3>
 
-      <style>
-        {`
-         .contact hr{
-           border-width:2px;
-           font-weight:bold;
-         }
-
-         .contact{
-           background-color:#f0f0f0;
-           text-align:left;
-           padding:10px;
-          }
-
-          .contact h3{
-            font-size:25px;
-            font-family:'Times New Roman',Times,sans-serif;
-            color:#333;
-            margin-left:29px;
-            display:inline-block;
-            position:relative;
-          }
-
-          .contact h3::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px; /* Adjust this value to control line position */
-            width: 100%;
-            height: 2px;
-            background-color: #333;
-          }
-
-          .contact p{
-            font-size:20px;
-            color: #666;
-            text-align:left;
-            margin-left: 30px;
-            
-          }
-
-          .phone{
-            color: black ;
-            }
-
-          .link{
-            font-size:17px;
-          }
-          
-
-        `}
-      </style>
+        {/* Contact Details */}
+        <div className="space-y-4">
+          <p className="text-lg">
+            <strong>Email: </strong>
+            <a href="mailto:tejasviraghuvanshi3@gmail.com" className="text-gray-800 hover:underline">
+              rg.tejasvi@gmail.com
+            </a>
+          </p>
+          <p className="text-lg">
+            <strong>Phone: </strong>
+            <span className="text-black dark:text-gray-500">8077185801</span>
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

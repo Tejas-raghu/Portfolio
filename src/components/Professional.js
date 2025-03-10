@@ -1,111 +1,48 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default function () {
+export default function ProfessionalExperience() {
+  const {darkMode} = useContext(ThemeContext);
   return (
-    <div id="professional" className="profession">
-      <hr></hr>
-      <h3 className="experience-header">Professional Experience</h3>
-      <div className="experience-box">
-        <h4>HighRadius | Product Engineer Intern</h4>
-        <p>
-          Developed a Machine Learning model using data analysis and predictive
-          modeling techniques to predict customer order amounts, integrated with
-          a Full-stack Invoice Management Application built with React JS, Java
-          Servlets, and JDBC for web development and database management.
-        </p>
+    <div className={`py-12 px-6 transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900"}`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <h3 className={`text-3xl font-semibold border-b-4 inline-block pb-1 mb-8 ${darkMode ? "border-gray-400" : "border-gray-600"}`}>
+          Professional Experience
+        </h3>
 
-        <a
-          href="https://github.com/Tejas-raghu/Invoice_Management_system_HRC"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="github-button">View</button>
-        </a>
+        {/* Experience Cards */}
+        <div className="space-y-6">
+          {/* HighRadius */}
+          <div className={`p-6 shadow-lg rounded-lg border-l-4 transition-all duration-300 ${darkMode ? "bg-gray-800 border-gray-500" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900 border-gray-800"}`}>
+            <h4 className="text-xl font-semibold">Field Assist | Software Developer</h4>
+            <p className="mt-2 leading-relaxed">
+              <ul>
+                <li> Currently employed as an SDE, actively developing and maintaining web application user interfaces using Vue.js and Nuxt.js,
+                   adhering to best practices and coding standards.</li>
+                <li>Collaborating with a team to implement features, resolve bugs, and enhance user experience.</li>
+                <li>Contributing to .NET backend APIs by developing, maintaining, and optimizing server-side logic and database interactions.</li>
+              </ul>
+            </p>
+          </div>
+          <div className={`p-6 shadow-lg rounded-lg border-l-4 transition-all duration-300 ${darkMode ? "bg-gray-800 border-gray-500" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900 border-gray-800"}`}>
+            <h4 className="text-xl font-semibold">HighRadius | Product Engineer Intern</h4>
+            <p className="mt-2 leading-relaxed">
+              Developed predictive ML model for customer order forecasting, integrated into a Full-Stack Invoice
+              Management App using ReactJS, Java Servlets, and JDBC for web development and database
+              management.
+            </p>
+            <a
+              href="https://github.com/Tejas-raghu/Invoice_Management_system_HRC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block mt-4 px-5 py-2 rounded-md shadow-md transition duration-300 ${darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"}`}
+            >
+              View Project
+            </a>
+          </div>
+        </div>
       </div>
-
-      <div className="experience-box">
-        <h4>Flick2Know | Intern</h4>
-        <p>
-          Leveraged Vue.js and Nuxt.js to develop and maintain user interfaces
-          for web applications, adhering to best practices and coding standards.
-          Collaborated with a team of experienced developers to implement new
-          features and resolve bugs, ensuring timely delivery of high-quality
-          products.
-        </p>
-
-      </div>
-      <style>
-        {`
-             .profession{
-                background-color: #f0f0f0;
-                padding: 10px;
-                text-align: left;
-             }
-
-             .profession hr{
-                border-width: 2px;
-                font-weight: bold;
-             }
-
-             .experience-header {
-                margin-left: 12px;
-               position: relative;            /* For positioning the line */
-               display: inline-block;         /* To contain inline elements */
-               font-size: 25px;
-               font-family: 'Times New Roman', Times, serif;
-               color: #333;
-          }
-
-          .experience-box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-          }
-
-          .experience-header::after {
-               content: "";
-               position: absolute;
-               left: 0;
-               bottom: -5px; /* Adjust this value to control line position */
-               width: 100%;
-               height: 2px;
-               background-color: #333;
-          }
-
-            .profession h4 {
-              text-align: left;
-              margin-left: 18px;
-              font-size: 20px;
-              font-family: 'Times New Roman', Times, serif;
-              color: #555;
-             }
-
-          .profession p{
-            text-align: left;
-            inline-height:1.5;
-            font-size:18px;
-            margin-left: 20px;
-            margin-right: 20px;
-            color:#666;
-          }
-
-          .github-button{
-            display: block;
-            margin: 20px ;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-            
-            `}
-      </style>
     </div>
   );
 }

@@ -1,120 +1,51 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 export default function Projects() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
+    <div id="project" className={`py-12 px-6 transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900"}`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <h3 className={`text-3xl font-semibold border-b-4 inline-block pb-1 mb-8 ${darkMode ? "border-gray-400" : "border-gray-600"}`}>
+          Other Projects
+        </h3>
 
-    <div id="project" className="project">
-    <hr></hr>
-        <h3>Projects</h3>
-
-        <div className="project-box">
-            <h4>Food Delivery Application</h4>
-            <p>
-                <ul>
-                    <li>Developed a Food Delivery App utilizing the MERN stack (MongoDB, Express.js, React, Node.js).</li>
-                    <li>Designed an intuitive frontend with React for seamless user browsing.</li>
-                    <li>Implemented user authentication using JWT for secure access.</li>
-                </ul>
-                <p><strong>Tech Used: </strong> Mongo DB, ReactJS, NodeJS, ExpressJS, HTML, CSS, JSON Web Tokens (JWT)</p>
-            </p>
-            <a href = "https://github.com/Tejas-raghu/FoodDelivery-MERN/tree/master" target = "_blank" rel = "noopener noreferrer">
-                <button className = "githubButton">View</button>
+        {/* Project Cards */}
+        <div className="space-y-6">
+          <div className={`p-6 shadow-lg rounded-lg border-l-4 transition-all duration-300 ${darkMode ? "bg-gray-800 border-gray-500" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900  border-gray-800"}`}>
+            <h4 className="text-xl font-semibold">Food Delivery Application</h4>
+            <ul className="list-disc pl-5 mt-2">
+              <li>Developed a Food Delivery App utilizing the MERN stack (MongoDB, Express.js, React, Node.js).</li>
+              <li>Designed an intuitive frontend with React for seamless user browsing.</li>
+              <li>Implemented user authentication using JWT for secure access.</li>
+            </ul>
+            <p className="mt-2"><strong>Tech Used:</strong> MongoDB, ReactJS, NodeJS, ExpressJS, HTML, CSS, JWT</p>
+            <a href="https://github.com/Tejas-raghu/FoodDelivery-MERN/tree/master" target="_blank" rel="noopener noreferrer" className={`inline-block mt-4 px-5 py-2 rounded-md shadow-md transition duration-300 ${darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"}`}>
+              View
             </a>
-        </div>
+          </div>
 
-        <div className = "project-box">
-            <h4>B2B Order Amount Production</h4>
-            <p>
-            Developed and implemented an efficient Machine Learning solution using Python, Numpy, Pandas and
-            ML libraries to forecast customer order amounts based on historical customer behavior
-            </p>
-            <p><strong>Tech Used:</strong> Python, Pandas, Seaborn, Matplotlib, Numpy, Scikit-learn</p>
-            <a href = "https://github.com/Tejas-raghu/Order_Amount_Prediction_ML" target = "_blank" rel = "noopener noreferrer">
-                <button className = "githubButton">View</button>
+          <div className={`p-6 shadow-lg rounded-lg border-l-4 transition-all duration-300 ${darkMode ? "bg-gray-800 border-gray-500" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900  border-gray-800"}`}>
+            <h4 className="text-xl font-semibold">B2B Order Amount Prediction</h4>
+            <p className="mt-2">Developed and implemented an efficient Machine Learning solution using Python, Numpy, Pandas, and ML libraries to forecast customer order amounts based on historical customer behavior.</p>
+            <p className="mt-2"><strong>Tech Used:</strong> Python, Pandas, Seaborn, Matplotlib, Numpy, Scikit-learn</p>
+            <a href="https://github.com/Tejas-raghu/Order_Amount_Prediction_ML" target="_blank" rel="noopener noreferrer" className={`inline-block mt-4 px-5 py-2 rounded-md shadow-md transition duration-300 ${darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"}`}>
+              View
             </a>
-        </div>
+          </div>
 
-        <div className = "project-box">
-
-            <h4>Weather Application</h4>
-            <p>
-            Created a weather application built with HTML/CSS, JavaScript, and RapidAPI. It provides real-time
-            weather data, hourly and daily forecasts, and an interactive map for multiple locations
-            </p>
-            <p><strong>Tech Used: </strong>HTML, CSS, Javascript, RapidAPI</p>
-            <a href="https://github.com/Tejas-raghu/WeatherApp" target="_blank" rel = "noopener noreferrer">
-                <button className = "githubButton">View</button>
+          <div className={`p-6 shadow-lg rounded-lg border-l-4 transition-all duration-300 ${darkMode ? "bg-gray-800 border-gray-500" : "bg-gradient-to-br from-gray-200 to-gray-300 text-gray-900  border-gray-800"}`}>
+            <h4 className="text-xl font-semibold">Weather Application</h4>
+            <p className="mt-2">Created a weather application built with HTML/CSS, JavaScript, and RapidAPI. It provides real-time weather data, hourly and daily forecasts, and an interactive map for multiple locations.</p>
+            <p className="mt-2"><strong>Tech Used:</strong> HTML, CSS, JavaScript, RapidAPI</p>
+            <a href="https://github.com/Tejas-raghu/WeatherApp" target="_blank" rel="noopener noreferrer" className={`inline-block mt-4 px-5 py-2 rounded-md shadow-md transition duration-300 ${darkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"}`}>
+              View
             </a>
+          </div>
         </div>
-
-
-        <style>
-            {`
-              .project{
-                text-align: left;
-                background-color: #f0f0f0;
-                padding: 10px;
-              }
-
-              .project hr{
-                border-width: 2px;
-                font-weight: bold;
-             
-              }
-
-              .project h3{
-                font-size:25px;
-                font-family:'Times New Roman',Times,sans-serif;
-                color: #333;
-                margin-left: 12px;
-                position: relative;
-                display: inline-block;
-              }
-
-              .project h3::after{
-                content: "";
-               position: absolute;
-               left: 0;
-               bottom: -5px; /* Adjust this value to control line position */
-               width: 100%;
-               height: 2px;
-               background-color: #333;
-              }
-
-              .project-box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-          }
-
-          .project-box h4 {
-            font-size: 20px;
-            margin-top: 0;
-          }
-
-          .project-box p {
-            font-size: 16px;
-            color:#666;
-            margin-left: 10px;
-          }
-
-          .githubButton{
-            display: block;
-            margin: 20px ;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-            
-            
-            `}
-        </style>
+      </div>
     </div>
-  )
+  );
 }
