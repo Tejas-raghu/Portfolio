@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import React, { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Header({ darkMode, setDarkMode }) {
+export default function Header() {
+  const {darkMode} = useContext(ThemeContext);
   return (
     <div
       className={`relative flex flex-col items-center justify-center min-h-screen ${
@@ -28,12 +31,12 @@ export default function Header({ darkMode, setDarkMode }) {
         </nav>
 
         {/* Dark Mode Toggle */}
-        <button
+        {/* <button
           className="ml-4 px-4 py-2 border rounded-full"
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
-        </button>
+        </button> */}
       </header>
 
       {/* Main Content */}

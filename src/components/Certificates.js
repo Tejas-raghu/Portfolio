@@ -18,6 +18,7 @@ export default function Certificates() {
           <li><strong>HackerRank SQL (Intermediate) -</strong> <a href="https://www.hackerrank.com/certificates/24413e7db549" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">HackerRank</a></li>
           <li><strong>AWS Academy Graduate -</strong> <a href="https://drive.google.com/file/d/1321OKquswMe3lTyDsyJgzuHDHTlQaWD5/view" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">AWS</a></li>
           <li><strong>HackerRank React (Basic) -</strong> <a href="https://www.hackerrank.com/certificates/8fefdde341c4?test_finished=true" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">HackerRank</a></li>
+          <li><strong>Agile with Atlassian Jira </strong></li>
         </ul>
       </div>
     </div>
